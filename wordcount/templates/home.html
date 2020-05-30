@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordcount</title>
+    <style>
+        html, body {
+            margin-top: 5rem;
+            background-color:goldenrod;
+            text-align: center;
+        }
+
+        .button {
+            color:goldenrod;
+        }
+
+        .box {
+            background-color:wheat;
+            text-align:center;
+        }
+
+        .button2 {
+            font-size:small;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+<h1>wordcount!</h1>
+    <form action="{%url 'result' %}" method = "GET">
+        <textarea name="fulltext" id="" cols="30" rows="10" placeholder="입력할거야?" class="box"></textarea>
+        <br>
+     <button type = "submit", class="button">count!</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <a href = "{%url 'about' %}", class = "button2">이게 뭐야</a>
+</div>
+</body>
+</html>

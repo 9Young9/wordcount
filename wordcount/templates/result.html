@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wordcount result!</title>
+    <style>
+        html, body {
+            margin-top: 1rem;
+            background-color:goldenrod;
+            text-align: center;
+        }
+
+        .button {
+            color:goldenrod;
+        }
+
+        .box {
+            background-color:wheat;
+            text-align:center;
+        }
+
+        .button2 {
+            font-size:small;
+        }
+        
+        .text_box {
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+    </style>
+</head>
+<body>
+<div>
+<h1>Result!</h1> 
+
+<a href="{%url 'home' %}", class = "button2">다시 세기!</a>
+
+<h2>당신이 입력한 단어의 개수는 총 {{total}}입니다!</h2>
+
+<h3>입력한 문장</h3>
+<div class="text_box">
+    {{text}}
+</div>
+
+<br>
+<br>
+<h3>단어 카운트</h3>
+{% for word,count in dictionary%}
+
+{{word}}:{{count}}
+<br>
+
+{% endfor %}
+</div>
+</body>
